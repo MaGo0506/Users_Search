@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  background: #6e2dbd;
+}
+a {
+  text-decoration: none;
+  color: #6e2dbd;
+}
+a:hover {
+  color: #6e2dbd;
+}
+.matchList .userData {
+  cursor: pointer;
+}
+.matchList .userData:hover {
+  background: lightcyan;
+}
