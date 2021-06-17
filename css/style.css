@@ -14,6 +14,12 @@ a {
 a:hover {
   color: #6e2dbd;
 }
+.matchList {
+  display: none;
+}
+.matchList.active {
+  display: block;
+}
 .matchList .userData {
   cursor: pointer;
 }
