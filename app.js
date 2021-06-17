@@ -13,7 +13,7 @@ searchInput.addEventListener('keyup', (e) => {
     const targetValue = e.target.value.toLowerCase(),
           filteredUsers =  users.filter((user) => {
             return user.username.toLowerCase().startsWith(targetValue);
-    });
+          });
     
     if (e.target.value.length === 0 && matchList) {
             matchList.classList.remove('active')
@@ -33,7 +33,7 @@ searchInput.addEventListener('keyup', (e) => {
       */
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
-      }
+    }
 
     /**
       * If we press enter after we time an user it sends us to its page if there is one
@@ -54,7 +54,7 @@ searchInput.addEventListener('keyup', (e) => {
 const searchUsers = async searchText => {
 try {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
-      users = await response.json();
+    users = await response.json();
 
 } catch (error) {
     console.log(error);
@@ -105,14 +105,14 @@ if (searchInput) {
   * We are creating an HTML that is called when there is no users
   * @param array - the array we are checking for matches
   */
-function showNoResult(array){
+function showNoResult(array) {
     let listData;
-    if(array.length){
+    if (array.length) {
         userValue = searchInput.value;
         listData = `<div class="card card-body userData js-userData">
         <a class="fs-5 fw-bold js-userNameTag">There is no results</a>
         </div>`;
-    }else{
+    } else {
       listData = array.join('');
     }
     matchList.innerHTML = listData;
